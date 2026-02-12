@@ -1,0 +1,10 @@
+def count_bits(n):
+    contador = 0  # começa com zero bits encontrados
+    
+    while n > 0:  # repete enquanto ainda houver bits para analisar
+        ultimo_bit = n % 2  # verifica o último bit (0 ou 1)
+        if ultimo_bit == 1:  # se for 1, adiciona ao contador
+            contador += 1
+        n = n // 2  # remove o último bit (divide inteiro por 2)
+
+    return contador  # devolve quantos bits 1 foram encontrados
